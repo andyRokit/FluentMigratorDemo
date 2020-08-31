@@ -1,5 +1,3 @@
-using FluentMigrator.Runner;
-using FluentMigratorDemo.Migrations;
 using FluentMigratorDemo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,11 +19,6 @@ namespace FluentMigratorDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddFluentMigratorCore();
-            services.ConfigureRunner(rb => rb
-                    .AddPostgres()
-                    .WithGlobalConnectionString("Host=localhost;Database=fluentmigrator;Username=postgres;Password=admin")
-                    .ScanIn(typeof(AddSecuritySchema).Assembly).For.Migrations());
             services.AddSingleton<ITenantService, TenantService>();
             services.AddControllers();
         }

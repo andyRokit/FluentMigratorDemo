@@ -1,0 +1,2 @@
+# FluentMigrator: How to set default schema for MigrationRunner
+Repo created to support [this question](https://stackoverflow.com/questions/62609823/fluentmigrator-how-to-set-default-schema-for-migrationrunner) on stackoverflow.  Updated to reflect answer.  Thanks to [Leroy Meijer](https://stackoverflow.com/users/1005398/leroy-meijer).

@@ -17,7 +17,7 @@ namespace FluentMigratorDemo.Controllers
         [HttpPost]
         public void Create(Tenant tenant)
         {
-            _tenantService.Create("dev_1");
+            _tenantService.Create(tenant.Name);
         }
     }
 }
